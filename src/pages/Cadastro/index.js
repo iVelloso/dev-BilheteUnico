@@ -34,11 +34,14 @@ export default function Cadastro({ navigation }) {
         }
     }
     return (
+        
         <View style={estilos.container}>
-            <Text style={estilos.texto}>
+           
+            <View style={estilos.texto}>
+            <Text>
                 Nome
             </Text>
-
+        </View>
             <TextInput
                 value={nome}
                 onChangeText={(text) => setNome(text)}
@@ -65,7 +68,8 @@ export default function Cadastro({ navigation }) {
                 onChangeText={(text) => setNascimento(text)}
                 style={estilos.input}
                 placeholder="Digite sua data de nascimento"
-                keyboardType="number-pad" />
+                keyboardType="number-pad"
+                 />
 
 
             <Text style={estilos.texto}>
@@ -118,9 +122,11 @@ const estilos = StyleSheet.create({
         gap: 8
     },
     texto: {
+
+        textAlign: 'left',
         color: "#020614",
         fontSize: 12,
-        fontFamily: 'Poppins-Light'
+        
     },
     input: {
         borderWidth: 1,
@@ -130,14 +136,14 @@ const estilos = StyleSheet.create({
         width: '80%'
     },
     button: {
-        backgroundColor: "#087C57",
-        paddingHorizontal: 140,
+        backgroundColor: "#04BF8A",
+        paddingHorizontal: 125,
         paddingVertical: 16,
-        borderRadius: 32
+        borderRadius: 40
     },
     textButton: {
         color: "#FFFFFF",
         fontSize: 16,
-        fontFamily: 'Poppins-Light'
+       
     }
 })

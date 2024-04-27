@@ -8,6 +8,11 @@ export default function Login({ navigation }) {
         navigation.navigate('Cadastro');
 
     }
+    function acessHome(){
+        navigation.navigate('Home',
+        { eml: email}
+        );
+    }
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
     const [validacao, setValida] = useState('');
@@ -21,11 +26,19 @@ export default function Login({ navigation }) {
 
         if (campoEmail === '' || campoSenha === '') {
             setValida("O campo está vazio");
+        }else {
+            acessHome();
         }
+
     }
 
     return (
+        
         <View style={estilos.container}>
+            <Text style={estilos.titulo}>
+                Sua sorte começa aqui!
+            </Text>
+
             <Text style={estilos.texto}>
                 E-mail
             </Text>
@@ -42,7 +55,7 @@ export default function Login({ navigation }) {
                 value={senha}
                 onChangeText={(text) => setSenha(text)}
                 style={estilos.input}
-                placeholder="Digite sua senha" />
+                placeholder="Digite sua senha" secureTextEntry={true} />
             <Text>{validacao}</Text>
 
             <View style={estilos.buttons}>
@@ -64,8 +77,6 @@ export default function Login({ navigation }) {
             </View>
         </View>
     );
-
-
 }
 
 const estilos = StyleSheet.create({
@@ -89,19 +100,27 @@ const estilos = StyleSheet.create({
         width: '80%'
     },
     button: {
+        alignItems: 'center',
         backgroundColor: "#04BF8A",
-        paddingHorizontal: 24,
+        paddingHorizontal: 125,
         paddingVertical: 8,
-        borderRadius: 8
+        borderRadius: 40,
     },
     buttons: {
-        flexDirection: 'row',
+        flexDirection: 'column',
         gap: 8,
         height: 36
     },
     textButton: {
+       
         color: "#FFFFFF",
         fontSize: 16,
         fontFamily: 'Poppins-Light'
+    },
+    titulo: {
+        fontSize: 22,
+    
+        paddingBottom: 120,
     }
+
 });
