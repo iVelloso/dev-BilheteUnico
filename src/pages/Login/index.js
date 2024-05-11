@@ -8,9 +8,9 @@ export default function Login({ navigation }) {
         navigation.navigate('Cadastro');
 
     }
-    function acessHome(){
+    function acessHome() {
         navigation.navigate('Home',
-        { eml: email}
+            { eml: email }
         );
     }
     const [email, setEmail] = useState('');
@@ -26,22 +26,24 @@ export default function Login({ navigation }) {
 
         if (campoEmail === '' || campoSenha === '') {
             setValida("O campo está vazio");
-        }else {
+        } else {
             acessHome();
         }
 
     }
 
     return (
-        
+
         <View style={estilos.container}>
             <Text style={estilos.titulo}>
                 Sua sorte começa aqui!
             </Text>
+            <View style={estilos.texto}>
+                <Text>
+                    E-mail
+                </Text>
+            </View>
 
-            <Text style={estilos.texto}>
-                E-mail
-            </Text>
             <TextInput
                 value={email}
                 onChangeText={(text) => setEmail(text)}
@@ -62,14 +64,14 @@ export default function Login({ navigation }) {
                 <TouchableOpacity
                     onPress={validar}
                     style={estilos.button}>
-                    <Text>
+                    <Text style={estilos.textButton}>
                         Entrar
                     </Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     onPress={acessarCadastro}
-                    style={estilos.button}>
-                    <Text>
+                    style={estilos.buttonCad}>
+                    <Text style={estilos.textButtonCad}>
                         Casdastre-se
                     </Text>
                 </TouchableOpacity>
@@ -88,20 +90,30 @@ const estilos = StyleSheet.create({
         gap: 8
     },
     texto: {
+        gap: 3,
         color: "#020614",
         fontSize: 12,
-        fontFamily: 'Poppins-Light'
+
     },
     input: {
-        borderWidth: 1,
         paddingHorizontal: 8,
-        paddingVertical: 8,
-        borderRadius: 8,
-        width: '80%'
+        paddingVertical: 12,
+        borderRadius: 4,
+        width: '80%',
+        backgroundColor: '#F7F7F7'
     },
     button: {
+
         alignItems: 'center',
         backgroundColor: "#04BF8A",
+        paddingHorizontal: 125,
+        paddingVertical: 8,
+        borderRadius: 40,
+    },
+    buttonCad: {
+        borderWidth: 1,
+        alignItems: 'center',
+        backgroundColor: "#FFFFFF",
         paddingHorizontal: 125,
         paddingVertical: 8,
         borderRadius: 40,
@@ -112,14 +124,18 @@ const estilos = StyleSheet.create({
         height: 36
     },
     textButton: {
-       
+        fontWeight: 'bold',
         color: "#FFFFFF",
         fontSize: 16,
-        fontFamily: 'Poppins-Light'
+    },
+    textButtonCad: {
+        fontWeight: 'bold',
+        color: "black",
+        fontSize: 16,
     },
     titulo: {
         fontSize: 22,
-    
+        fontWeight: 'bold',
         paddingBottom: 120,
     }
 

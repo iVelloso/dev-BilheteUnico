@@ -137,13 +137,13 @@ const estilos = StyleSheet.create({
     },
     button: {
         backgroundColor: "#04BF8A",
-        paddingHorizontal: 125,
+        paddingHorizontal: 120,
         paddingVertical: 16,
         borderRadius: 40
     },
     textButton: {
         color: "#FFFFFF",
-        fontSize: 16,
+        fontSize: 14,
        
     }
 })
