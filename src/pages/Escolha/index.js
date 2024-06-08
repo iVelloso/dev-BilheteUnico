@@ -1,5 +1,6 @@
 import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
+
 export default function Escolha({ navigation }) {
   const image = { uri: 'assets/home.png' };
 

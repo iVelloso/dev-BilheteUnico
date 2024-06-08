@@ -72,7 +72,7 @@ export default function Login({ navigation }) {
                     onPress={acessarCadastro}
                     style={estilos.buttonCad}>
                     <Text style={estilos.textButtonCad}>
-                        Casdastre-se
+                        Cadastre-se
                     </Text>
                 </TouchableOpacity>
 
@@ -126,12 +126,12 @@ const estilos = StyleSheet.create({
     textButton: {
         fontWeight: 'bold',
         color: "#FFFFFF",
-        fontSize: 16,
+        fontSize: 11,
     },
     textButtonCad: {
         fontWeight: 'bold',
         color: "black",
-        fontSize: 16,
+        fontSize: 11,
     },
     titulo: {
         fontSize: 22,
