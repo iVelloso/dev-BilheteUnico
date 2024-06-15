@@ -42,6 +42,10 @@ export default StyleSheet.create({
         fontSize: 22,
     
         paddingBottom: 120,
-    }
+    },
+     image: {
+    flex: 1,
+    justifyContent: 'center',
+  },
 
 });

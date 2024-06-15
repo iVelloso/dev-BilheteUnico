@@ -4,15 +4,15 @@ import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react
 export default function Escolha({ navigation }) {
   const image = { uri: 'assets/home.png' };
 
-  const handleCadastroPress = () => {
-    navigation.navigate('Cadastro');
+  const acessarHome = () => {
+    navigation.navigate('Home');
   };
 
   return (
     <View style={styles.container}>
       <ImageBackground source={image} resizeMode="cover" style={styles.image}>
         <Text style={styles.text}>Escolha seu Número da Sorte</Text>
-        <TouchableOpacity style={[styles.generateButton, { justifyContent: 'center' }]} onPress={handleCadastroPress}>
+        <TouchableOpacity style={[styles.generateButton, { justifyContent: 'center' }]} onPress={acessarHome}>
           <Text style={[styles.generateButtonText, { textAlign: 'center' }]}>Confirmar</Text>
         </TouchableOpacity>
       </ImageBackground>
