@@ -1,33 +1,15 @@
-import { ImageBackground, StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
 
-
-export default function Inicio({ route, navigation }) {
-  const image = { uri: 'assets/home.png' };
-
-  function acessarLogin() {
-    navigation.navigate('Login');
-
-}
-
+export default function Inicio() {
   return (
-    <View style={styles.container}>
-    <Text style={styles.title}>Bem Vindo!</Text>
-      </View>
-
-      
-
-        
-
-    
-   
+    <View style={styles.container} /> 
   );
 }
 
-
 const styles = StyleSheet.create({
- container:{
+  container: {
+    flex: 1,
     backgroundColor: '#087C57',
-    
-
- },
+  },
 });
