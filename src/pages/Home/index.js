@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     backgroundColor: '#f5f5f5',
-    padding: 20, // Increased padding to make the footer larger
+    padding: 20,
     borderTopWidth: 1,
     borderTopColor: '#dcdcdc',
   },
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   footerIcon: {
-    fontSize: 24, // Icon size
+    fontSize: 24,
   },
   footerButtonText: {
     fontSize: 16,
