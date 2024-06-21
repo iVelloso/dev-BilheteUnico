@@ -96,7 +96,7 @@ export default function Cadastro({ navigation }) {
 
             <TouchableOpacity
                 onPress={validar}
-                style={estilos.button}>
+                style={estilos.button1}>
                 <Text style={estilos.textButton}>
                     Cadastrar
                 </Text>
@@ -104,7 +104,7 @@ export default function Cadastro({ navigation }) {
 
             <TouchableOpacity
                 onPress={acessarLogin}
-                style={estilos.button}>
+                style={estilos.button2}>
                 <Text style={estilos.textButton}>
                     Voltar para o Login
                 </Text>
@@ -135,15 +135,24 @@ const estilos = StyleSheet.create({
         borderRadius: 8,
         width: '80%'
     },
-    button: {
+    button1: {
         backgroundColor: "#04BF8A",
-        paddingHorizontal: 120,
-        paddingVertical: 16,
-        borderRadius: 40
+        paddingHorizontal: 80,
+        paddingVertical: 8,
+        borderRadius: 40,
+        marginTop: 15,
+    },
+    button2: {
+        backgroundColor: "#04BF8A",
+        paddingHorizontal: 80,
+        paddingVertical: 8,
+        borderRadius: 40,
+        marginTop: 15,
     },
     textButton: {
         color: "#FFFFFF",
         fontSize: 14,
+        
        
     }
 })

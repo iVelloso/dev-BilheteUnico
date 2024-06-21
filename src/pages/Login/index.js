@@ -65,7 +65,7 @@ export default function Login({ navigation }) {
                     onPress={validar}
                     style={estilos.button}>
                     <Text style={estilos.textButton}>
-                        Entrar
+                        Login
                     </Text>
                 </TouchableOpacity>
                 <TouchableOpacity
@@ -109,14 +109,16 @@ const estilos = StyleSheet.create({
         paddingHorizontal: 125,
         paddingVertical: 8,
         borderRadius: 40,
+        marginTop: 15,
     },
     buttonCad: {
         borderWidth: 1,
         alignItems: 'center',
         backgroundColor: "#FFFFFF",
-        paddingHorizontal: 125,
+        paddingHorizontal: 100,
         paddingVertical: 8,
         borderRadius: 40,
+        marginTop: 15,
     },
     buttons: {
         flexDirection: 'column',
@@ -132,6 +134,7 @@ const estilos = StyleSheet.create({
         fontWeight: 'bold',
         color: "black",
         fontSize: 16,
+        
     },
     titulo: {
         fontSize: 22,
