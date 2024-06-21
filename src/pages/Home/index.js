@@ -1,59 +1,57 @@
-import { ImageBackground, StyleSheet, Text, TouchableOpacity, View} from "react-native";
-import style from "../Home/styles";
+import React from 'react';
+import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function Home({ route, navigation }) {
   const image = { uri: 'assets/home.png' };
 
   function acessarEscolha() {
     navigation.navigate('Escolha');
-
-}
+  }
 
   return (
     <View style={styles.container}>
       <ImageBackground source={image} resizeMode="cover" style={styles.image}>
-      <Text style={styles.title}>Bem Vindo!</Text>
-      <Text style={styles.t2}>Fulano de tal</Text>
+        <Text style={styles.title}>Bem Vindo!</Text>
+        <Text style={styles.t2}>Fulano de tal</Text>
 
-      <View style={styles.card}>
-        <Text style={styles.cardTitle1}>Meu número da sorte</Text>
-        <TouchableOpacity style={styles.buttonSmall}
-          onPress={acessarEscolha}>
-          <Text style={styles.buttonTextSmall}>Ver</Text>
-        </TouchableOpacity>
+        <View style={styles.card}>
+          <Text style={styles.cardTitle1}>Meu número da sorte</Text>
+          <TouchableOpacity style={styles.buttonSmall} onPress={acessarEscolha}>
+            <Text style={styles.buttonTextSmall}>Ver</Text>
+          </TouchableOpacity>
 
-        <View style={styles.button}>
-        <TouchableOpacity style={styles.buttonNumber}
-            onPress={acessarEscolha}>
-          <Text style={styles.buttonTextNumber}>XX</Text>
-        </TouchableOpacity>
+          <View style={styles.button}>
+            <TouchableOpacity style={styles.buttonNumber} onPress={acessarEscolha}>
+              <Text style={styles.buttonTextNumber}>XX</Text>
+            </TouchableOpacity>
+          </View>
         </View>
-      </View>
 
-      <View style={styles.card}>
-        <Text style={styles.cardTitle2}>Sortear meus números</Text>
-        <TouchableOpacity style={styles.buttonLarge}>
-          <Text style={styles.buttonTextLarge}>GERAR</Text>
-        </TouchableOpacity>
-      </View>
+        <View style={styles.card}>
+          <Text style={styles.cardTitle2}>Sortear meus números</Text>
+          <TouchableOpacity style={styles.buttonLarge}>
+            <Text style={styles.buttonTextLarge}>GERAR</Text>
+          </TouchableOpacity>
+        </View>
       </ImageBackground>
 
       <View style={styles.footer}>
         <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate('Home')}>
+          <Text style={styles.footerIcon}>🏠</Text>
           <Text style={styles.footerButtonText}>Home</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate('Historico')}>
+          <Text style={styles.footerIcon}>📜</Text>
           <Text style={styles.footerButtonText}>Histórico</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate('Perfil')}>
+          <Text style={styles.footerIcon}>👤</Text>
           <Text style={styles.footerButtonText}>Perfil</Text>
         </TouchableOpacity>
       </View>
     </View>
-
   );
 }
-
 
 const styles = StyleSheet.create({
   image: {
@@ -153,19 +151,22 @@ const styles = StyleSheet.create({
     color: '#000',
     textAlign: 'center',
   },
-  footer:{
+  footer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     backgroundColor: '#f5f5f5',
-    padding: 10,
+    padding: 20, // Increased padding to make the footer larger
     borderTopWidth: 1,
     borderTopColor: '#dcdcdc',
   },
   footerButton: {
     alignItems: 'center',
   },
+  footerIcon: {
+    fontSize: 24, // Icon size
+  },
   footerButtonText: {
     fontSize: 16,
     color: '#000',
-  }
+  },
 });
