@@ -7,6 +7,9 @@ export default function Home({ route, navigation }) {
   function acessarEscolha() {
     navigation.navigate('Escolha');
   }
+  function acessarEscolhasGeradas() {
+    navigation.navigate('EscolhasGeradas');
+  }
 
   return (
     <View style={styles.container}>
@@ -29,7 +32,7 @@ export default function Home({ route, navigation }) {
 
         <View style={styles.card}>
           <Text style={styles.cardTitle2}>Sortear meus números</Text>
-          <TouchableOpacity style={styles.buttonLarge}>
+          <TouchableOpacity style={styles.buttonLarge} onPress={acessarEscolhasGeradas}>
             <Text style={styles.buttonTextLarge}>GERAR</Text>
           </TouchableOpacity>
         </View>
@@ -66,7 +69,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     color: '#ffff',
     marginLeft: 30,
-    marginTop: -150,
+    marginTop: -250,
   },
   t2: {
     fontSize: 25,
@@ -74,6 +77,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     color: '#ffff',
     marginLeft: 30,
+    
   },
   name: {
     fontSize: 18,
@@ -125,7 +129,7 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     alignItems: 'center',
     width: 40,
-    marginLeft: 100,
+    marginLeft: 125,
     shadowColor: '#000',
     shadowOpacity: 0.5,
     shadowRadius: 10,
@@ -140,7 +144,7 @@ const styles = StyleSheet.create({
     borderRadius: 32,
     width: '40%',
     alignItems: 'center',
-    marginLeft: 75,
+    marginLeft: 87,
     shadowColor: '#000',
     shadowOpacity: 0.5,
     shadowRadius: 10,

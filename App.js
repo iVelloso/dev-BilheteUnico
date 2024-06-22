@@ -5,6 +5,7 @@ import Home from './src/pages/Home';
 import Cadastro from './src/pages/Cadastro';  
 import Escolha from './src/pages/Escolha'; 
 import Inicio from './src/pages/Inicio'; 
+import EscolhasGeradas from './src/pages/EscolhasGeradas'; 
 import React from 'react';
 
 
@@ -20,6 +21,7 @@ export default function App() {
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Escolha" component={Escolha} />
       <Stack.Screen name="Inicio" component={Inicio} />
+      <Stack.Screen name="EscolhasGeradas" component={EscolhasGeradas} />
      
       </Stack.Group>
     </Stack.Navigator>
