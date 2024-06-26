@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 50, 
     right: -10,
-    marginTop: 250,
+    marginTop: 270,
   },
   titleEscolha: {
     color: 'white',
