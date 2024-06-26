@@ -116,11 +116,13 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOpacity: 0.5,
     shadowRadius: 10,
+  
   },
   buttonTextSmall: {
     fontSize: 12,
     color: '#000',
     textAlign: 'center',
+
   },
   buttonNumber: {
     marginTop: 20,
@@ -133,6 +135,8 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOpacity: 0.5,
     shadowRadius: 10,
+    left: -10,
+
   },
   buttonTextNumber: {
     fontSize: 15,

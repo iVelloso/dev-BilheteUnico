@@ -10,6 +10,7 @@ export default function EscolhasGeradas() {
   return (
     <View style={styles.container}>
       <ImageBackground source={backgroundImage} resizeMode="cover" style={styles.imageBackground}>
+      <Text style={styles.titleEscolha}>Seus números são:</Text>
         <TouchableOpacity style={styles.touchable} onPress={() => navigation.navigate('Home')}>
           <Text style={styles.title}>Seus números são:</Text>
           <View style={styles.boxContainer}>
@@ -22,7 +23,6 @@ export default function EscolhasGeradas() {
         </TouchableOpacity>
       </ImageBackground>
 
-      {/* Imagem do trevo sobreposta */}
       <Image source={trevoImage} style={styles.imageTrevo} />
     </View>
   );
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   boxContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
-    marginTop: 20,
+    marginTop: -50,
   },
   box: {
     width: 50,
@@ -61,18 +61,25 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: -120,
   },
   boxText: {
     fontSize: 25,
     color: '#087C57',
     fontWeight: 'bold',
-    marginTop: -10,
+
   },
   imageTrevo: {
-    width: 150, 
-    height: 150, 
+    width: 300, 
+    height: 300, 
     position: 'absolute',
     top: 50, 
-    right: 20,
+    right: -10,
+    marginTop: 250,
+  },
+  titleEscolha: {
+    color: 'white',
+    fontSize: 25,
+    marginTop: 30,
   },
 });
